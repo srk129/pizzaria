@@ -1,0 +1,74 @@
+form{
+    text-align: center;
+}
+#fname{
+    position: relative;
+    right: 18px;
+    
+}
+
+#lname{
+    position: relative;
+    left: 18px;
+    
+}
+.heading{
+    background-color: khaki;
+    width: 353px;
+    margin: auto;
+}
+
+#emailid{
+    text-align: center;
+    width: 353px;
+
+}
+#pn{
+    position: relative;;
+    right: 18px;
+}
+#age{
+    position: relative;;
+    left: 18px;
+}
+input{
+    height: 30px;
+    background-color:#f7f7f7;
+    border-color: #e3e3e3;
+    text-align: center;
+    border: 0px;
+}
+h1{
+    text-align: center;
+}
+.main{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    width: 30%;
+    margin: auto;
+    background-color:#e6e6e6;
+}
+select{
+    text-align: center;
+    width: 275px;
+    height: 30px;
+    background-color:#f7f7f7;
+
+}
+#pass{
+    width: 353px;
+}
+
+#cpass{
+    width: 353px;
+}
+.btn{
+    height: 40px;
+    border: 0px;
+    border-radius: 20px;
+    background-color:lime;
+    width: 353px;
+}
+body{background: rgb(163,69,184);
+    background: linear-gradient(90deg, rgba(163,69,184,1) 0%, rgba(72,159,173,1) 42%, rgba(76,242,206,1) 71%);
+}

@@ -1,0 +1,54 @@
+body
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #999999;
+    font-weight: bold;
+    text-align: center;
+}
+#page-wrap
+{
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+}
+.header
+{
+    background: tomato;
+}
+p
+{
+    margin: 0 0 15px 0;
+}
+#img1
+{
+    float:left;
+    background: yellowgreen;
+    width:420px;
+}
+#img2
+{
+    float:right;
+    background: deepskyblue;
+    width:420px;
+}
+#main-col
+{
+    width:520px;
+    float:right;
+    background: thistle;
+    text-align: left;
+    
+}
+#sidebar
+{
+    width:280px;
+    float:left;
+    background: yellowgreen;
+    text-align: left;
+}
+#footer
+{
+    clear:both;
+    background: gold;
+}

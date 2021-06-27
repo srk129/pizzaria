@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register here</title>
+</head>
+<style type="text/css">
+#border
+{
+width: 600px;
+border: 4px solid red;
+padding: 25px;
+margin-top: 100px;
+margin-left: 400px;
+height: 500px;
+border-radius: 15px;
+}
+
+</style>
+<body bgcolor="#ffb838">
+	<h1><div style="background-color:red"><font color=#FFCA28><center>HELLO THERE!<b></div></b></center></font></h1>
+	<hr>
+	<h1><big><center>REGISTER HERE!</center></big></h1>
+	<hr>
+	<article><ol>
+		<p>First you will have to fill a form for personal details to get the mebership:</p>
+		<li>Get updates on all the exciting offers on your email</li>
+		<li>Exciting coupons and gift cards for prime membership</li>
+		<li>You can give <b>suggestions </b>to add new flavours,toppings,sauces in our menu to make your own customised pizzas</li>
+		<li>Upto 60% off on your birthday!<b>***</b></li>
+	</ol></article>
+	<hr>
+	<div id="border">
+	<form action="sigt8.html" name="regform">
+		<label for="fname">FIRST NAME:</label>
+				<input type=text name="fname" id="fname" placeholder="Enter valid first name" autofocus>
+		<label for="lname">LAST NAME:</label>
+		<input type=text name="lname" id="lname"  placeholder="Enter valid last name"><br>
+		<hr>
+		<p>GENDER:</p>
+		<input type=radio name="gender" id="male"value="Male">
+		<LABEL FOR="male">MALE</LABEL><br>
+		<input type=radio name="gender" id="female"value="Female">
+		<LABEL FOR="male">FEMALE</LABEL><br>
+		<input type=radio name="gender" id="other"value="Other">
+		<LABEL FOR="male">OTHER</LABEL><br>
+		<hr>
+		<p>HOW FREQUENTLY DO YOU ORDER PIZZA FROM US:</p>
+			<select name="dropdown">
+			<option value="so">Only on special ocassions</option>
+			<option value="mont">Monthly</option>
+			<option value="freq">Frequently</option>
+			<option value="eve">Everytime i feel like!</option>
+		</select><br>
+		<hr>
+		<label for="date">BIRTHDAY:</label><br>
+		<input type=date name="date" id="date" placeholder="Enter valid birthday"><br>
+		<label for="pnumber">PHONE NUMBER:</label><br>
+		<input type=tel name="pnumber" id="pnumber" required autocomplete="off"><br>
+		<label for="email">EMAIL ID:</label><br>
+		<input type=email name="email" id="email" required placeholder="xyz@example.com" required autocomplete="off"><br>
+		<hr>
+		<p>ENTER YOUR ADDRESS HERE:</p>
+		<textarea rows="4" cols="50">
+		</textarea><br>
+
+	</div>
+		<hr>
+		<label for="submit">SUBMIT</label>
+		<input type=submit name="submit" id="submit"><br>
+
+	</form>
+
+	</body>
+
+<script>
+  document.getElementById("type").innerHTML = "This is a form!";
+  document.write(Date());
+  document.getElementById("type").childNodes[1].style.backgroundColor =color;
+function myFunction() 
+{
+   x = document.regform.fname.value;
+  y =document.regform.lname.value;
+  if (x=="") 
+  {
+    alert("Input not valid.First name missing");
+    return false;
+  } 
+  else if(y=="")
+  {
+    alert("Input not valid.Last name missing");
+    return false;
+  }
+  else
+  {
+    alert("Hello "+x+y);
+
+    return true;
+  }
+} 
+function clickfun()
+{
+  var x = document.forms["trial"];
+  var text = "";
+  var i;
+  for (i = 0; i < x.length ;i++) 
+  {
+    text += x.elements[i].value + "<br>";
+  }
+  document.getElementById("pre").innerHTML = text;
+}
+
+</script>
+</html>

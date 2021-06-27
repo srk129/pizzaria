@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>deals today</title>
+</head>
+<style>
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+body 
+{
+  background-color: black;
+  background-image: url("https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&w=1000&q=80");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:100%;
+  color:coral;
+  font-size: 120%;  
+}
+footer
+{
+  background-color: black;
+  color:coral;
+}
+nav
+{
+  margin-:110px;
+
+}
+a:link 
+{
+  color: red ;
+}
+a:visited 
+{
+  color: white;
+}
+
+a:hover 
+{
+  color: hotpink;
+}
+
+a:active 
+{
+  color: coral;
+}
+
+div:hover p 
+{
+  display: block;
+}
+</style>
+<body bgcolor="#26A69A">
+  <header>
+    <nav>
+    <center>
+      <a href="/Menu/" >MENU</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="deals.html">DEALS TODAY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="/Our stores/">FIND OUR STORES</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="makeyourownpizza.html" target="_blank">MAKE YOUR OWN PIZZA HERE!</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="formspizzaria.html" target="_blank">REGISTER HERE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="">ABOUT US</a>
+    </center>
+    </nav>
+    <hr>
+    <h1><div style="background-color:#FFCA28"><font color=red><center><b>PIZZARIA</div></b></center></font></h1>
+    <hr>
+  </header>
+  <h1><center>HERE ARE SOME DEALS :</center></h1>
+  <main>
+<div class="container">
+  <img src="https://api.dominos.co.in/prod-olo-api/images/brandOfferImages/Combo_offers_20180225.png" alt="DEAL 1" class="image" style="width:100%">
+  <div class="middle">
+    <div class="text">DEAL 1</div>
+  </div>
+</div>
+
+  </main>
+
+<footer>
+  <p><big>Contact us at:334522788     Email us at:kulkarni.sr@somaiya.edu</big></p>
+  <marquee>To leave us some reccomendations and reviews <a href="review.html" target ="_blank">click here</a></marquee>
+  </footer>
+</body>
+</html>

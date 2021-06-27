@@ -1,0 +1,93 @@
+<div id="content"></div>
+
+      <script type="text/babel">
+
+      var Tableforbasictask = React.createClass({
+
+              render: function() {
+
+                    return (
+                              <form  class="table-responsive" onSubmit={this.handleSubmit}>
+
+                               <table className="table table-bordered table-striped-col nomargin" id="table-data">
+                                    <tr align="center">
+                                        <td>Task  Name</td>
+                                        <td>Standard Discription of Task</td>
+                                        <td>Employee Comment</td>
+                                        <td>Employee rating</td>
+                                    </tr>
+
+                                <tr>
+                                    <td>
+                                        <input
+                                          className="form-control"
+                                          type="text"
+                                          placeholder="Your Taks Name"
+                                        />
+                                    </td>
+                                    <td>
+                                        <textarea 
+                                          className="form-control" 
+                                          placeholder="Say something..." >
+                                          </textarea>
+                                    </td>
+                                    <td>
+                                        <textarea 
+                                          className="form-control" 
+                                          placeholder="Say Comment..." >
+                                          </textarea>
+                                    </td>
+                                    <td>
+                                        <select className="form-control">
+                                            <option value="">Option</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input 
+                                            type="submit" 
+                                            className="btn btn-default addButton" 
+                                            value="Add" />
+                                    </td>
+                                </tr>
+                              </table>
+                              </form>
+                    );
+                  }
+            });
+
+            var BasicTask = React.createClass({
+
+                render: function() {
+                  return (
+
+                    <div className="downloadlinks">
+                           <Tableforbasictask />
+                    </div>
+
+                  );
+                }
+            });
+
+            var AttributeTask = React.createClass({
+
+                render: function() {
+                  return (
+
+                    <div className="downloadlinks">
+                           Hello I am an Attribute Component
+                    </div>
+
+                  );
+                }
+
+            });
+
+        ReactDOM.render(<div><BasicTask /><AttributeTask /></div>, document.getElementById('content'));
+
+      </script>
+</div>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+ <html> 
+     <link rel="stylesheet" type="text/css" href="catalogue.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
+     <script>
+        var app=angular.module("myApp",[]);
+        app.controller('myController', function($scope)
+            { 
+              $scope.items = [
+                {"no":1,"name":"BRASS STUDDED MULTI COLOR NECKLACE","price":"₹195.00"},
+                {"no":2,"name":"BAIGA MULTICOLOR ART DECO CANVAS PAINTING","price":"₹3,416.00"},
+                {"no":3,"name":"HANDMADE ELEPHANT STATUE","price":"₹1,337.00"},
+                {"no":4,"name":"METAL NANDI SITTING","price":"₹2,262.00"},
+                {"no":5,"name":"WOODEN KEY HOLDER","price":"₹246.00"},
+              ]; 
+              $scope.click=function(){
+                  console.log($scope.items);
+              }
+            }
+        );
+     </script>
+<body> 
+    <nav>
+        <h1>TribeIt</h1>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>    
+                <a href="aboutus.html">About us</a>
+            </li>
+            <li>
+                <a href="./price.xml">Top Products</a>
+            </li>
+            <li>
+                <input type="text" id="search" placeholder="Search here..." onblur="blurFunction()" class="search">
+            </li>
+            <span style="float: right;">
+                <li>
+                    <a href="Login.html">Login</a>
+                </li>
+                <li>
+                    <a href="Signup.html">Sign up</a>
+                </li>
+            </span>
+        </ul>
+    </nav>
+    <div class="main" ng-app="myApp" ng-controller="myController"> 
+        <h1>Top Items</h1>
+        <table class="table">
+            <tr>
+                <th>Sr No.</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+            <tr ng-repeat="i in items">
+                <td>
+                    {{i.no}}
+                </td>
+                <td>
+                    {{i.name}}
+                </td>
+                <td>
+                    {{i.price}}
+                </td>
+            </tr>
+        </table>
+    </div> 
+</body> 
+</html>

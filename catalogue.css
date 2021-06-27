@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    background-color:#91ff69;
+    border: 1em;
+}
+
+nav h1{
+    font-weight: bold;
+    text-shadow: 2px 3px grey;
+    font-size: 50px;
+    text-align: center;
+}
+
+nav h1 {
+    padding-top: 20px;
+    color: white;
+}
+nav li {
+    float: left;
+    color: black;
+}
+
+nav li :hover{
+    background-color: black;
+    border-radius: 40px;
+}
+
+nav li a:hover{
+    color: white;
+}
+
+nav h1:hover{
+    color: black;
+}
+
+nav ul {
+    list-style-type: none;
+    background: rgb(70, 255, 222);
+    background: linear-gradient(90deg, rgba(70, 255, 222, 1) 2%, rgba(101, 255, 246, 1) 45%, rgba(0, 212, 255, 1) 100%, rgba(65, 255, 132, 1) 100%, rgba(176, 179, 177, 1) 100%);
+    overflow: hidden;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    display: block;
+    font-size: 20px;
+    color: black;
+}
+
+.search{
+    margin-top: 8px;
+    margin-left: 10px;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.main{
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #91ff69;
+}
+
+.main h1{
+    color:black;
+    font-weight: bold;
+}
+
+.main table td{
+    padding: 10px;
+    background-color: aliceblue;
+    border-bottom: 1px solid red;
+}

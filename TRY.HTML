@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form name="trial" onsubmit="return myFunction()" method="post">
+  <center><p id="type"></p></center>
+		<label for="fname">FIRST NAME:</label>
+		<input type=text name="fname" id="fname" placeholder="Enter valid first name" >
+		<label for="lname">LAST NAME:</label>
+		<input type=text name="lname" id="lname"  placeholder="Enter valid last name">
+    <br>
+		<hr>
+		
+		<label for="submit">SUBMIT</label>
+		<input type=submit name="submit" id="submit" value="SUBMIT"><br>
+    <hr>
+<label for="clk">CLICK ME!</label>
+    <input type="button" onclick="clickfun()" name="clk" id="clk" value="CLICK ME">
+    <hr>
+    <p id="pre"></p>
+    <p id="fr"></p>
+    
+	</form>
+</body>
+
+<script>
+  document.getElementById("type").innerHTML = "This is a form!";
+  document.write(Date());
+  document.getElementById("type").childNodes[1].style.backgroundColor =color;
+function myFunction() 
+{
+   x = document.trial.fname.value;
+  y =document.trial.lname.value;
+  if (x=="") 
+  {
+    alert("Input not valid.First name missing");
+    return false;
+  } 
+  else if(y=="")
+  {
+    alert("Input not valid.Last name missing");
+    return false;
+  }
+  else
+  {
+    alert("Hello "+x+y);
+
+    return true;
+  }
+} 
+function clickfun()
+{
+  var x = document.forms["trial"];
+  var text = "";
+  var i;
+  for (i = 0; i < x.length ;i++) 
+  {
+    text += x.elements[i].value + "<br>";
+  }
+  document.getElementById("pre").innerHTML = text;
+}
+
+</script>
+</html>

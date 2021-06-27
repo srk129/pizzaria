@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>pizzaria</title>
+<link href="menu.css" rel="stylesheet" type="text/css" >
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
+<script>
+     var app=angular.module("myApp",[]);
+        app.controller('myController', function($scope)
+            { 
+              $scope.vpizzas = [
+                {"name":"Margherita","desc":"A hugely popular margherita, with a deliciously tangy single cheese topping","photo":"https://www.dominos.co.in/files/items/Margherit.jpg","price":"₹120.00"},
+                {"name":"Double Cheese Margherita","desc":"The ever-popular Margherita - loaded with extra cheese... oodies of it!","photo":"https://www.dominos.co.in/files/items/Double_Cheese_Margherita.jpg","price":"₹190.00"},
+                {"name":"Farm House","desc":"A pizza that goes ballistic on veggies! Check out this mouth watering overload of crunchy, crisp capsicum, succulent mushrooms and fresh tomatoes","photo":"https://www.dominos.co.in/files/items/Farmhouse.jpg","price":"₹250.00"},
+                {"name":"Peppy Paneer","desc":"Chunky paneer with crisp capsicum and spicy red pepper - quite a mouthful!","photo":"https://www.dominos.co.in/files/items/Peppy_Paneer.jpg","price":"₹300.00"},
+              ]; 
+              $scope.nvpizzas = [
+                {"name":"Pepper Barbecue Chicken","desc":"Pepper Barbecue Chicken I Cheese","photo":"https://www.dominos.co.in/files/items/Pepper_Barbeque.jpg","price":"₹240.00"},
+                {"name":"Chicken Sausage","desc":"Chicken Sausage I Cheese","photo":"https://www.dominos.co.in/files/items/Chicken_Sausage.jpg","price":"₹240.00"},
+                {"name":"Chicken Golden Delight","desc":"Mmm! Barbeque chicken with a topping of golden corn loaded with extra cheese. Worth its weight in gold!","photo":"https://www.dominos.co.in/files/items/Chicken_Golden_Delight.jpg","price":"₹280.00"},
+                {"name":"Non Veg Supreme","desc":"Bite into supreme delight of Black Olives, Onions, Grilled Mushrooms, Pepper BBQ Chicken, Peri-Peri Chicken, Grilled Chicken Rashers","photo":"https://www.dominos.co.in/files/items/Non-Veg_Supreme.jpg","price":"₹350.00"},
+              ]; 
+              $scope.pizzm = [
+                {"name":"Tomato","desc":"Juicy tomato in a flavourful combination with cheese I tangy sauce","photo":"https://www.dominos.co.in/files/items/pizza_mania_tomato.png","price":"₹200.00"},
+                {"name":"Veg Loaded","desc":"Tomato | Grilled Mushroom |Jalapeno |Golden Corn | Beans in a fresh pan crust","photo":"https://www.dominos.co.in/files/items/PrimeLoadedL.jpg","price":"₹300.00"},
+                {"name":"Cheesy","desc":"Orange Cheddar Cheese I Mozzarella","photo":"https://www.dominos.co.in/files/items/PrimeCheesyL.jpg","price":"₹250.00"},
+                {"name":"Corn Delight","desc":"Golden Corn","photo":"https://www.dominos.co.in/files/items/golden_corn_veg.jpg","price":"₹250.00"},
+              ]; 
+              $scope.sab = [
+                {"name":"Garlic Breadsticks","desc":"The endearing tang of garlic in breadstics baked to perfection.","photo":"https://www.dominos.co.in/files/items/046015%20garlic%20bread_1346075642.jpg","price":"₹200.00"},
+                {"name":"Stuffed Garlic Bread","desc":"Freshly Baked Garlic Bread stuffed with mozzarella cheese, sweet corns & tangy and spicy jalapeños","photo":"https://www.dominos.co.in/files/items/stuffed-garlic-breadstick_1346070564.jpg","price":"₹250.00"},
+                {"name":"Veg/Non Veg Pasta Italiano White","desc":"Penne Pasta tossed with extra virgin olive oil, exotic herbs & a generous helping of new flavoured sauce.","photo":"https://www.dominos.co.in/files/items/046115-white-pasta-veg-1346597403.jpg","price":"₹300.00"},
+                {"name":"Choco Lava Cake","desc":"Filled with delecious molten chocolate inside.","photo":"https://www.dominos.co.in/files/items/choco-lava-cake-771.jpg","price":"₹180.00"},
+              ]; 
+              $scope.click=function(){
+                  console.log($scope.items);
+              }
+            }
+        );
+</script>
+<style>
+
+</style>
+</head>
+<body bgcolor="#26A69A" onload="loadpp()">
+	<header>
+		<nav>
+		<center>
+			<a href="menu.html" target="_blank">MENU</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="grid.html" target="_blank">DEALS TODAY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="/Our stores/">FIND OUR STORES</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="makeyourownpizza.html" target="_blank">MAKE YOUR OWN PIZZA HERE!</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="formspizzaria (1).html" target="_blank">REGISTER HERE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="aboutus.html" target="_blank">ABOUT US</a>
+		</center>
+		</nav>
+		<hr>
+		<h1><div style="background-color:#FFCA28"><font color=red><center><b>PIZZARIA</div></b></center></font></h1>
+        <hr>
+    </header>
+	
+<main>
+    <div style="background-color:#FFCA28"><font color=red><center><h1>MENU</h1></div></center></font>
+    
+    <div class="main" ng-app="myApp" ng-controller="myController"> 
+        <div class="table1">
+            <center><h1>VEG PIZZAS</h1></center>
+            <table class="table" >
+                <tr>
+                    <td ng-repeat="i in vpizzas" width= 25%>
+                        <center>
+                        {{i.name}}<br>
+                        {{i.desc}}<br>
+                        <img alt="{{i.name}}" ng-src="{{i.photo}}" style="height:100px;width:100px" /><br>
+                        {{i.price}}<br>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="table2">
+            <center><h1>NON VEG PIZZAS</h1></center>
+            <table class="table">
+                <tr>
+                    <td ng-repeat="i in nvpizzas" width= 25%>
+                        <center>
+                        {{i.name}}<br>
+                        {{i.desc}}<br>
+                        <img alt="{{i.name}}" ng-src="{{i.photo}}" style="height:100px;width:100px" /><br>
+                        {{i.price}}<br>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="table3">
+            <center><h1>PIZZA MANIA</h1></center>
+            <table class="table">
+                <tr>
+                    <td ng-repeat="i in pizzm" width= 25%>
+                        <center>
+                        {{i.name}}<br>
+                        {{i.desc}}<br>
+                        <img alt="{{i.name}}" ng-src="{{i.photo}}" style="height:100px;width:100px" /><br>
+                        {{i.price}}<br>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="table4">
+            <center><h1>ACCOMPANIMENT</h1></center>
+            <table class="table" >
+                <tr>
+                    <td ng-repeat="i in sab" width= 25%>
+                        <center>
+                        {{i.name}}<br>
+                        {{i.desc}}<br>
+                        <img alt="{{i.name}}" ng-src="{{i.photo}}" style="height:100px;width:100px" /><br>
+                        {{i.price}}<br>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div> 
+</main>
+<footer>
+<p><big><div align="center">Contact us at:334522788 		Email us at:kulkarni.sr@somaiya.edu</div></big></p>
+<marquee>To leave us some reccomendations and reviews <a href="review.html" target ="_blank">click here</a></marquee>
+</footer>
+
+</body>
+</html>

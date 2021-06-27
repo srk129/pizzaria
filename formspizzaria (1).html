@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formspizzaria</title>
+</head>
+<style type="text/css">
+#border
+{
+width: 600px;
+border: 4px solid red;
+padding: 25px;
+margin-top: 100px;
+margin-left: 400px;
+height: 630px;
+border-radius: 15px;
+}
+</style>
+<body bgcolor="#ffb838">
+
+	<h1><div style="background-color:red"><font color=#FFCA28><center><b>PIZZARIA</div></b></center></font></h1>
+	<hr>
+	<h1><big><center>REGISTER HERE!</center></big></h1>
+	<hr>
+	<article><ol>
+		<p>First you will have to fill a form for personal details to get the mebership:</p>
+		<li>Get updates on all the exciting offers on your email</li>
+		<li>Exciting coupons and gift cards for prime membership</li>
+		<li>You can give <b>suggestions </b>to add new flavours,toppings,sauces in our menu to make your own customised pizzas</li>
+		<li>Upto 60% off on your birthday!<b>***</b></li>
+	</ol></article>
+	<hr>
+	<div id="border">
+	<form action="signup.html" name="reg" onsubmit="return myFunction()" onreset="res()" method="post">
+		<label for="fname">FIRST NAME:</label>
+				<input type=text name="fname" id="fname" placeholder="Enter valid first name" autofocus onblur="blurfunc()">
+		<label for="lname">LAST NAME:</label>
+		<input type=text name="lname" id="lname"  placeholder="Enter valid last name" onblur="blurfunc()"><br>
+		<hr>
+		<p>GENDER:</p>
+		<input type=radio name="gender" id="male"value="Male">
+		<LABEL FOR="male">MALE</LABEL><br>
+		<input type=radio name="gender" id="female"value="Female">
+		<LABEL FOR="male">FEMALE</LABEL><br>
+		<input type=radio name="gender" id="other"value="Other">
+		<LABEL FOR="male">OTHER</LABEL><br>
+		<hr>
+		<p>HOW FREQUENTLY DO YOU ORDER PIZZA FROM US:</p>
+			<select name="dropdown" id="use" onchange="selcng()">
+				 <option value="">--SELECT--</option>
+			<option value="special">Only on special ocassions</option>
+			<option value="monthly">Monthly</option>
+			<option value="frequently">Frequently</option>
+			<option value="everytime">Everytime i feel like!</option>
+		</select><br>
+		<hr>
+		<label for="date">BIRTHDAY:</label><br>
+		<input type=date name="date" id="date" placeholder="Enter valid birthday"><br>
+		<label for="pnumber">PHONE NUMBER:</label><br>
+		<input type=tel name="pnumber" id="pnumber" autocomplete="off"><br>
+		<label for="email">EMAIL ID:</label><br>
+		<input type=email name="email" id="email" placeholder="xyz@example.com" autocomplete="off"><br>
+		<hr>
+		<p>ENTER YOUR ADDRESS HERE:</p>
+		<textarea id="abd" name="abd" rows="4" cols="50">
+		</textarea><br>
+		<hr>
+		<p>Do you agree with our terms and conditions:<br>
+    <input type="checkbox" name="myCheck" value="one" id="myCheck">
+  <label for="myCheck">YES</label><br>
+    <hr>
+    <label for="reset">RESET</label>
+    <input type=reset name="reset" id="reset"><br>
+		
+    <hr>
+    <label for="submit">SUBMIT</label>
+    <input type=submit name="submit" id="submit"><br>
+    </div>
+    <p id="demo"></p>
+	</form>
+	</body>
+	<script>
+  document.getElementById("type").innerHTML = "REGISTER HERE!";
+  document.write(Date());
+  function selcng() 
+  {
+  var x = document.getElementById("use").value;
+  document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+  function blurfunc()
+  {
+    var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+  
+  var y = document.getElementById("lname");
+  y.value = y.value.toUpperCase();
+  }
+  function res()
+  {
+    alert("The form was reset");
+  }
+function myFunction() 
+{
+    var letters = /^[A-Za-z]+$/;
+    var numbers = /^[0-9]+$/;
+     var letterNumber = /^[0-9a-zA-Z]+$/;
+ 
+   x = document.reg.fname.value;
+  y =document.reg.lname.value;
+  //x = x.toUpperCase();
+  if (x=="") 
+  {
+    alert("Name input not valid.First name missing");
+     document.reg.fname.focus() ;
+    return false;
+  } 
+  if (y=="")
+  {
+    alert("Name input not valid.Last name missing");
+     document.reg.lname.focus() ;
+    return false;
+  }
+  //if(x.match(letters) && y.match(letters))
+      //{
+      	//return true;
+      //}
+    if(x.match(numbers) || y.match(numbers))
+      {
+      alert('Number input invalid for name.Please input alphabet characters only');
+       document.reg.fname.focus() ;
+      document.reg.lname.focus() ;
+
+      return false;
+      }
+     //if(x.match(letterNumber) || y.match(letterNumber))
+     //{
+     	//alert('Alphanumeric input invalid for name.Please input alphabet characters only');
+     	 //document.reg.fname.focus() ;
+      //document.reg.lname.focus() ;
+
+      //return false;
+     //}
+     if ( ( reg.gender[0].checked == false ) && ( reg.gender[1].checked == false ) && ( reg.gender[2].checked == false ) )
+    {
+        alert ( "Please choose your Gender: Male or Female or Other" );
+        return false;
+    }
+  var use = document.getElementById("use");
+        if (use.value == "") {
+            //If the "Please Select" option is selected display error.
+            alert("Please select an option to continue with registeration!");
+            document.getElementById("use").focus() ;
+            return false;
+        }
+        var d=document.reg.date.value;
+        if(d=="")
+        {
+         alert( "Please provide your Birthday!" );
+            document.reg.date.focus() ;
+            return false; 
+        }
+                if( document.reg.pnumber.value == "" ) 
+  		{
+            alert( "Please provide your Phone Number!" );
+            document.reg.pnumber.focus() ;
+            return false;
+  		}
+ 
+  if(document.reg.pnumber.value.match(letters))
+      {
+      alert('Alphabet input incorrect for phone number.Please input numbers only');
+      document.reg.pnumber.focus() ;
+      return false;
+      }
+     // if(document.reg.pnumber.value.match(letterNumber))
+      //{
+      //alert('Alphanumeric input incorrect for phone number.Please input numbers only');
+      //document.reg.pnumber.focus() ;
+      //return false;
+      //}
+       if(document.reg.pnumber.value.length != 10)
+  		{
+    		alert( "INCORRECT NUMBER value(not 10-digits).Please provide your CORRECT Phone Number!" );
+            document.reg.pnumber.focus() ;
+            return false;
+  		}
+       var a = document.reg.abd.value;
+  if(a.length == 0)
+  {
+      alert( "Please enter your permanent address!" );
+      document.reg.abd.value.focus() ;
+          return false;  
+  }
+         var c= document.getElementById("myCheck").checked;
+         if(c==false)
+  {
+      alert( "Please agree with our terms and conditions to with registeration!" );
+             document.getElementById("myCheck").focus() ;
+            return false;  
+  }
+
+      if( document.reg.email.value == "" ) 
+  		{
+            alert( "Please provide your Email!" );
+            document.reg.email.focus() ;
+            return false;
+  		}
+        
+  if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.reg.email.value))
+  		{
+            return true;
+  		}
+  else
+  {
+        alert( "Please provide your correct Email address!Format-->(xyz@gmail.com)");
+            document.reg.email.focus() ;
+            return false;
+  }
+  
+} 
+
+</script>
+</html>

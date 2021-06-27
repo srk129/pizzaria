@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>BOOKS STORE</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+        <script type="text/babel">
+        function OnTap(){
+            ReactDOM.render(<h1>WELCOME TO SHREYA'S ONLINE BOOK STORE!</h1>, document.getElementById('head'));
+        }
+        function OnDtap(){
+            ReactDOM.render(<h1>Welcome To Online Book Store</h1>, document.getElementById('head'));
+
+        }
+        </script>
+        <script>
+
+            var app2=angular.module('MyApp',[]);
+            app2.controller('MyController',function($scope)
+            {
+                $scope.Hide=function(){
+                    $scope.IsInVisible=$scope.IsInVisible=true;
+                    $scope.IsVisible=false;
+                }
+                $scope.Show=function(){
+                    $scope.IsVisible=$scope.IsVisible=true;
+                    $scope.IsInVisible=false;
+                }
+                $scope.Stylecng=function(){
+                    $scope.myStyle={
+                    "color" : "white",
+                    "background-color" : "coral",
+                    "font-size" : "20px",
+                    "padding" : "50px"
+                    }
+                };
+            }
+            );
+        </script>
+        <style>
+            body{
+                font-family:'Times New Roman', Times, serif;
+                margin:0 auto;
+                width:900px;
+                align-items: center;
+            }
+            h1{
+                color:khaki;
+                background-color:rebeccapurple;
+                text-align: center;
+            }
+            #tab tr
+            {
+                background-color:darkslategray;
+                color:lightcyan;
+
+            }
+            #tab tr:hover{
+                background-color:crimson;
+                
+            }
+    
+            #tab th{
+                text-align: center;
+                color:khaki;
+                background-color:rebeccapurple;
+            }
+            
+        </style>
+
+    </head>
+
+    <body>
+        <div id='head'>
+            <h1><center>Welcome To Online Book Store</center></h1>
+        </div>
+        <hr>
+        <div ng-app='MyApp' ng-controller="MyController">
+            <div ng-style="myStyle" ng-hide='IsInVisible' ng-show='IsVisible' class="table">
+                <center>
+                <table id='tab'>
+                    <caption>DETAILS OF BOOKS AVAILABLE</caption>
+                    <tr>
+                        <th>NAME</th>
+                        <th>AUTHOR</th>
+                        <th>TYPE</th>
+                    </tr>
+                    <tr>
+                        <td>Destiny</td>
+                        <td>P.J.Franklin</td>
+                        <td>Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>Hope</td>
+                        <td>D.F.Langer</td>
+                        <td>Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>Keep up the good work</td>
+                        <td>Melinda Francis</td>
+                        <td>Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>Greatness in all</td>
+                        <td>Gajendra Kumar</td>
+                        <td>Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>Superamacy</td>
+                        <td>Holidaycult</td>
+                        <td>Magzine</td>
+                    </tr>
+                </table>
+                </center>
+            </div>
+            <hr>
+            <br>
+            <input type="button" value='Change DOM' ng-click="Hide()" ng-dblclick="Show()"/>
+            <input type="button" value="Change CSS" ng-click="Stylecng()" ng-dblclick="Stylestill()">
+            <input type='button' onclick="OnTap();" ondblclick="OnDtap()" value="Change Heading"/>
+        </div>
+    </body>
+</html>
